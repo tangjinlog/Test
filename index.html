@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="navigation.js" defer></script>
+  <title>FE-practice page</title>
+</head>
+<body class="home">
+  <a href="#main" class="skip-to-content">Skip to content</a>
+  <!-- navigation -->
+  <header class="flex primary-header">
+    <div>
+      <ion-icon name="logo-github" class="logo"></ion-icon>
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"></button>
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators">
+        <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">01</span>home</a></li>
+        <li><a class="uppercase text-white fs-200 letter-spacing-2" href="#" ><span aria-hidden="true">02</span>destination</a></li>
+        <li><a class="uppercase text-white fs-200 letter-spacing-2" href="#"><span aria-hidden="true">03</span>lifestyle</a></li>
+        <li><a class="uppercase text-white fs-200 letter-spacing-2" href="#"><span aria-hidden="true">04</span>none</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main -->
+  <main id="main" class="grid-container grid-container--home flex">
+    <div>
+      <h1 class="fs-500 uppercase text-accent letter-spacing-1">
+        so, you want to travel to
+        <span class="d-block fs-900 uppercase text-white letter-spacing-1">past</span>
+      </h1>
+      <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
+        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+        because we’ll give you a truly out of this world experience!</p>
+    </div>
+
+    <div>
+      <a class="uppercase fs-600 text-dark bg-white large-button" href="destination.html">to past</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap" rel="stylesheet">
+
+  <title>Design System</title>
+</head>
+
+<body>
+  <div class="container flow">
+    <h1 class="uppercase">Design System</h1>
+    
+    <section id="colors" class="flow" style="margin: 4rem 0;">
+      <h2 class="numbered-title"><span>01</span> colors</h2>
+      
+      <div class="flex">
+        <div class="flow" style="flex-grow: 1;">
+          <div class="bg-dark text-white fs-500" style="padding: 3rem 1rem 1rem; border: 1px solid white;">#292929</div>
+          <p><span class="text-accent">RGB</span> 41, 41, 41</p>
+          <p><span class="text-accent">HSL</span> 0º, 0%, 16%</p>
+        </div>
+  
+        <div class="flow" style="flex-grow: 1;">
+          <div class="bg-accent text-dark fs-500" style="padding: 3rem 1rem 1rem; border: 1px solid white;">#eda012</div>
+          <p><span class="text-accent">RGB</span> 237, 160, 18</p>
+          <p><span class="text-accent">HSL</span> 39º, 86%, 50%</p>
+        </div>
+        
+        <div class="flow" style="flex-grow: 1;">
+          <div class="bg-white text-dark fs-500" style="padding: 3rem 1rem 1rem; border: 1px solid white;">#fff</div>
+          <p><span class="text-accent">RGB</span> 255, 255, 2</p>
+          <p><span class="text-accent">HSL</span> 0º, 0%, 100%</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="typography" class="flow" style="margin: 4rem 0;">
+      <h2 class="numbered-title"><span>02</span> typography</h2>
+
+      <div class="flex">
+        <div class="flow" style="flex-basis: 100%; --flow-space: 4rem;">
+          <div>
+            <p class="text-accent">Heading 1 - Poppins - 150px</p>
+            <p class="uppercase fs-900 text-white">past</p>
+          </div>
+          <div>
+            <p class="text-accent">Heading 2 - Poppins - 100px</p>
+            <p class="uppercase fs-800 text-white">past</p>
+          </div>
+          <div>
+            <p class="text-accent">Heading 3 - Poppins - 56px</p>
+            <p class="uppercase fs-700 text-white">past</p>
+          </div>
+        </div>
+
+        <div class="flow" style="flex-basis: 100%; --flow-space: 4rem;">
+          <div>
+            <p class="text-accent">Subheading 1 - Poppins - 28px</p>
+            <p class="uppercase fs-500 text-white">past</p>
+          </div>
+          <div>
+            <p class="text-accent">Subheading 2 - Poppins - 14px</p>
+            <p class="uppercase fs-200 text-white">past</p>
+          </div>
+          <div>
+            <p class="text-accent">Body text</p>
+            <p class="fs-400 text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquetnec urna. In nisi neque, aliquet vel, dapibus id, mattis sdfsdafsdfdasfsdafasdfsdafasdasvel, nisi. Sed pretium, ligula sollicitudin
+            laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.
+            Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.
+            Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
+            ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam
+            mollis. Ut justo. Suspendisse potent</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interactive-elements">
+      <h2 class="numbered-title"><span>03</span> interactive-elements</h2>
+      
+      <!-- navigation -->
+      <div>
+        <nav>
+          <ul class="flex primary-navigation underline-indicators">
+            <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>active</a></li>
+            <li><a class="uppercase text-white letter-spacing-2" href="javascript: void(0);" ><span>02</span>hovered</a></li>
+            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>idle</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex">
+        <div style="margin: 4rem 0; flex-basis: 100%;">
+          <a class="uppercase fs-600 text-dark bg-white large-button" href="javascript: void(0);">past</a>
+        </div>
+
+        <div style="flex-basis: 100%; margin: 4rem 0;">
+          <p class="text-accent">Tab list</p>
+          <div class="flex tab-list underline-indicators">
+            <button class="uppercase fs-300 letter-spacing-2 text-accent" aria-selected="true">korea</button>
+            <button class="uppercase fs-300 letter-spacing-2 text-accent" aria-selected="false">europe</button>
+            <button class="uppercase fs-300 letter-spacing-2 text-accent" aria-selected="false">america</button>
+          </div>
+          
+          <p class="text-accent" style="margin-top: 4rem;">Dot-indicators</p>
+          <div class="flex dot-indicators" style="margin: 1rem 0;">
+            <button aria-selected="true"><span class="sr-only">slide title</span></button>
+            <button aria-selected="false"><span class="sr-only">slide title</span></button>
+            <button aria-selected="false"><span class="sr-only">slide title</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
