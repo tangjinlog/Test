@@ -168,6 +168,10 @@ body {
   margin-top: var(--flow-space, 1rem);
 }
 
+.flow-space-small {
+  --flow-space: .75rem;
+}
+
 /* typography */
 
 .fs-900 { font-size: var(--fs-900) ;}
@@ -308,6 +312,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  .mobile-nav-toggle:focus-visible {
+    outline: 5px solid white;
+    outline-offset: 5px;
+  }
 }
 
 @media(min-width: 35em) and (max-width: 45em) {
@@ -420,7 +429,6 @@ body {
 
 /* page specific background */
 .home,
-.destination,
 .lifestyle,
 .none {
   background: url(./asset/background.jpeg);
@@ -434,6 +442,13 @@ body {
   }
 }
 
+.destination,
+.lifestyle
+{
+  background: url(./asset/destination-bg.webp);
+  background-size: cover;
+  /* background-position: right bottom; */
+}
 
 
 /* ------------------- */
@@ -452,10 +467,98 @@ body {
   max-width: 47ch;
 }
 
-/* home layout */
+.numbered-title {
+  text-align: left;
+  grid-area: title;
+}
+
+/* destination layout */
+.grid-container--destination {
+  --flow-space: 1.5rem;
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content';
+}
+
+.grid-container--destination .images {
+  grid-area: image;
+  align-self: start;
+}
+
+.grid-container--destination #america-image > img {
+  margin-inline: auto;
+  width: 500px;
+}
+
+.grid-container--destination > .tab-list {
+  grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+  grid-area: content;
+}
+
+.destination-meta {
+  flex-direction: column;
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid hsl(var(--clr-white) / .1);
+}
+
+.destination-meta p {
+  font-size: 1.75rem;
+}
+
+/* lifestyle layout */
+.grid-container--lifestyle {
+  --flow-space: 1.5rem;
+  grid-template-areas:
+    'title'
+    'content'
+    'tabs'
+    'image';
+}
+
+.grid-container--lifestyle .images {
+  grid-area: image;
+  align-self: start;
+}
+
+.grid-container--lifestyle > .dot-indicators {
+  grid-area: tabs;
+}
+
+.grid-container--lifestyle > .lifestyle-details {
+  grid-area: content;
+}
+
+.grid-container--lifestyle > .lifestyle-details h2 {
+  color: hsl(var(--clr-white) / .5)
+}
+
+@media(min-width: 35em) {
+  .numbered-title {
+    justify-self: start;
+    margin-top: 2rem;
+  }
+
+  .destination-meta {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .grid-container--destination #europe-image > img {
+    margin-inline: auto;
+    max-width: 81.75%;
+  }
+}
+
 
 @media(min-width:45em) {
   .grid-container {
+    text-align: left;
     column-gap: var(--container-gap, 2rem);
     grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
   }
@@ -473,4 +576,34 @@ body {
     grid-column: 3;
   }
   
+  .grid-container--destination {
+    justify-items: start;
+    align-content: start;
+    grid-template-areas:
+      '. title title .'
+      '. image tabs .'
+      '. image content .';
+  }
+
+  .grid-container--destination img {
+    max-width: 90%;
+  }
+
+  .grid-container--destination .destination-meta {
+    --gap: min(12vw, 6rem);
+    justify-content: start;
+  }
+  
+  .grid-container--lifestyle {
+    justify-items: start;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
+    grid-template-areas:
+    '. title title .'
+    '. content image .'
+    '. tabs image .';
+  }
+  .grid-container--lifestyle .images {
+    grid-column: span 2;
+    align-self: center;
+  }
 }

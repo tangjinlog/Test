@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+  <title>FE-practice page</title>
+</head>
+<body class="destination">
+  <a href="#main" class="skip-to-content">Skip to content</a>
+  <!-- navigation -->
+  <header class="flex primary-header">
+    <div>
+      <ion-icon name="logo-github" class="logo"></ion-icon>
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"></button>
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators">
+        <li><a class="uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">01</span>home</a></li>
+        <li class="active"><a class="uppercase text-white fs-200 letter-spacing-2" href="#" ><span aria-hidden="true">02</span>destination</a></li>
+        <li><a class="uppercase text-white fs-200 letter-spacing-2" href="lifestyle.html"><span aria-hidden="true">03</span>lifestyle</a></li>
+        <li><a class="uppercase text-white fs-200 letter-spacing-2" href="#"><span aria-hidden="true">04</span>none</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main -->
+  <main id="main" class="grid-container grid-container--destination flex flow">
+    <h1 class="numbered-title"><span aria-hidden="true">01</span>Pick your destination</h1>
+
+    <div class="images flow" id="korea-image">
+      <img src="./asset/destination-korea.jpeg" alt="korea">
+    </div>
+    <div class="images" hidden id="america-image">
+      <img src="./asset/destination-america.jpeg" alt="america">
+    </div>
+    <div class="images" hidden id="europe-image">
+      <img src="./asset/destination-europe.jpeg" alt="europe">
+    </div>
+
+    <div class="flex tab-list underline-indicators" role="tablist" aria-label="destination list">
+      <button class="uppercase fs-300 letter-spacing-2 text-accent" role="tab" tabindex="0" aria-selected="true" aria-controls="korea-tab" data-image="korea-image">korea</button>
+      <button class="uppercase fs-300 letter-spacing-2 text-accent" role="tab" tabindex="-1" aria-selected="false" aria-controls="europe-tab" data-image="europe-image">europe</button>
+      <button class="uppercase fs-300 letter-spacing-2 text-accent" role="tab" tabindex="-1" aria-selected="false" aria-controls="america-tab" data-image="america-image">america</button>
+    </div>
+
+    <!-- korea tab -->
+    <article id="korea-tab" class="destination-info flow" tabindex="0" role="tabpanel">
+      <h1 class="uppercase fs-900 text-white">korea</h1>
+
+      <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
+        the tallest planetary mountain in our solar system. It’s two and a half times 
+        the size of Everest!</p>
+
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="uppercase fs-200 text-accent">years</h3>
+          <p class="fs-400">1951s</p>
+        </div>
+        <div>
+          <h3 class="uppercase fs-200 text-accent">place</h3>
+          <p class="uppercase fs-400">Dongmyo</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- europe tab -->
+    <article hidden id="europe-tab" class="destination-info flow" tabindex="0" role="tabpanel">
+      <h1 class="uppercase fs-900 text-white">europe</h1>
+
+      <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
+        winter lover’s dream. With an icy surface, it’s perfect for a bit of 
+        ice skating, curling, hockey, or simple relaxation in your snug 
+        wintery cabin.</p>
+
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="uppercase fs-200 text-accent">years</h3>
+          <p class="fs-400">1920s</p>
+        </div>
+        <div>
+          <h3 class="uppercase fs-200 text-accent">place</h3>
+          <p class="uppercase fs-400">cityhall</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- america tab -->
+    <article hidden id="america-tab" class="destination-info flow" tabindex="0" role="tabpanel">
+      <h1 class="uppercase fs-900 text-white">america</h1>
+
+      <p>The only moon known to have a dense atmosphere other than Earth, Titan 
+        is a home away from home (just a few hundred degrees colder!). As a 
+        bonus, you get striking views of the Rings of Saturn.</p>
+
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="uppercase fs-200 text-accent">years</h3>
+          <p class="fs-400">1910s</p>
+        </div>
+        <div>
+          <h3 class="uppercase fs-200 text-accent">place</h3>
+          <p class="uppercase fs-400">bridge</p>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
